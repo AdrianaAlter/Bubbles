@@ -12,8 +12,9 @@ h1 {
   animation-direction: alternate-reverse;
   border: 5px double;
   border-radius: 50%;
-  font-family: monospace;
+  font-family: 'Parisienne', cursive;
   font-size: 30px;
+  font-weight: bold;
   padding: 40px 10px;
   position: absolute;
 }
@@ -24,8 +25,9 @@ h2 {
   border: 5px double;
   border-radius: 50%;
   bottom: 5%;
-  font-family: monospace;
-  font-size: 12px;
+  font-family: 'Parisienne', cursive;
+  font-size: 16px;
+  font-weight: bold;
   left: 85%;
   padding: 40px 10px;
   position: absolute;

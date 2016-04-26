@@ -7,14 +7,20 @@
 body, div, ul {
   min-height: 620px;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1 {
   animation: fontcolorshift 17s infinite, spin 12s infinite, drift 9s infinite, paddingadjust 8s infinite;
   animation-direction: alternate-reverse;
   border: 5px double;
   border-radius: 50%;
-  font-family: 'Parisienne', cursive;
+  font-family: 'Lobster', cursive;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: lighter;
   padding: 40px 10px;
   position: absolute;
 }
@@ -25,9 +31,9 @@ h2 {
   border: 5px double;
   border-radius: 50%;
   bottom: 5%;
-  font-family: 'Parisienne', cursive;
+  font-family: 'Lobster', cursive;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: lighter;
   left: 85%;
   padding: 40px 10px;
   position: absolute;

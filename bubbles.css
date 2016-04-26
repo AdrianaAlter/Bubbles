@@ -8,11 +8,6 @@ body, div, ul {
   min-height: 620px;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 h1 {
   animation: fontcolorshift 17s infinite, spin 12s infinite, drift 9s infinite, paddingadjust 8s infinite;
   animation-direction: alternate-reverse;
@@ -25,7 +20,8 @@ h1 {
   position: absolute;
 }
 
-h2 {
+a {
+  text-decoration: none;
   animation: fontcolorshift 12s infinite, spin 18s infinite, drift 6s infinite, paddingadjust 10s infinite;
   animation-direction: alternate-reverse;
   border: 5px double;
@@ -43,11 +39,11 @@ h1:hover {
   animation-play-state: paused;
 }
 
-h2:hover {
+a:hover {
   animation-play-state: paused;
 }
 
-.bubbles {
+html {
   animation: colorshift 30s steps(100) infinite;
   animation-direction: alternate;
   filter: blur(10px);

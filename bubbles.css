@@ -279,11 +279,11 @@ html, .bubbles {
 }
 
 @keyframes mergecolorshift {
-    0% {background-image: url("file:///home/adriana/Desktop/backgrounds/1.png");}
-    25% {background-image: url("file:///home/adriana/Desktop/backgrounds/2.png");}
-    50% {background-image: url("file:///home/adriana/Desktop/backgrounds/3.png");}
-    75% {background-image: url("file:///home/adriana/Desktop/backgrounds/4.png");}
-    100% {background-image: url("file:///home/adriana/Desktop/backgrounds/5.png");}
+    0% {background-image: url("./images/1.png");}
+    25% {background-image: url("./images/2.png");}
+    50% {background-image: url("./images/3.png");}
+    75% {background-image: url("./images/4.png");}
+    100% {background-image: url("./images/5.png");}
   }
 
 @keyframes colorshift {

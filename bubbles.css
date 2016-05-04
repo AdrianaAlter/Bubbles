@@ -45,13 +45,13 @@ a:hover {
 }
 
 html {
-  /*background: -moz-linear-gradient(top, #ffa07a, #1e90ff);*/
+  background: -moz-linear-gradient(top, #ffa07a, #1e90ff);
   /*-moz-animation: colorshift 30s steps(100) infinite;*/
 }
 
 html, .bubbles {
   /*animation: colorshift 30s steps(100) infinite;*/
-  animation: mergecolorshift 30s steps(100) infinite;
+  animation: mergecolorshift 20s steps(100) infinite;
 
   animation-direction: alternate;
   /*filter: blur(10px);*/
@@ -64,6 +64,38 @@ html, .bubbles {
   /*transition: background 5s ease-in;*/
   width: 100%;
 }
+
+.one {
+  background-image: url("./images/1.png");
+  height: 0;
+  width: 0;
+  display: none !important;
+}
+.two {
+  background-image: url("./images/2.png");
+  display: none !important;
+  height: 0;
+  width: 0;
+}
+.three {
+  background-image: url("./images/3.png");
+  display: none !important;
+  height: 0;
+  width: 0;
+}
+.four {
+  background-image: url("./images/4.png");
+  display: none !important;
+  height: 0;
+  width: 0;
+}
+.five {
+  background-image: url("./images/5.png");
+  display: none !important;
+  height: 0;
+  width: 0;
+}
+
 
 .bubbles ul {
   list-style: none;

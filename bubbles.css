@@ -10,6 +10,7 @@ body, div, ul {
 
 h1 {
   animation: fontcolorshift 17s infinite, spin 12s infinite, drift 9s infinite, paddingadjust 8s infinite;
+  -moz-animation: fontcolorshift 17s infinite, spin 12s infinite, drift 9s infinite, paddingadjust 8s infinite;
   animation-direction: alternate-reverse;
   border: 5px double;
   border-radius: 50%;
@@ -44,14 +45,23 @@ a:hover {
 }
 
 html {
-  animation: colorshift 30s steps(100) infinite;
+  /*background: -moz-linear-gradient(top, #ffa07a, #1e90ff);*/
+  /*-moz-animation: colorshift 30s steps(100) infinite;*/
+}
+
+html, .bubbles {
+  /*animation: colorshift 30s steps(100) infinite;*/
+  animation: mergecolorshift 30s steps(100) infinite;
+
   animation-direction: alternate;
-  filter: blur(10px);
+  /*filter: blur(10px);*/
+
   height: 100%;
   margin: auto;
   opacity: 50%;
   outline: 0;
   position: relative;
+  /*transition: background 5s ease-in;*/
   width: 100%;
 }
 
@@ -62,7 +72,7 @@ html {
 .bubbles li:before {
   border-radius: 100%;
   content: "";
-  filter: blur(5px);
+  /*filter: blur(5px);*/
   height: 90%;
   left: 5%;
   position: absolute;
@@ -76,18 +86,20 @@ html {
   height: 80%;
   width: 40%;
   transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
+  -moz-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
 }
 
 .bubbles li:after {
   border-radius: 100%;
   content: "";
   display: none;
-  filter: blur(1px);
+  /*filter: blur(1px);*/
   height: 80%;
   left: 10%;
   position: absolute;
   top: 5%;
   transform: rotateZ(-30deg);
+  -moz-transform: rotateZ(-30deg);
   width: 80%;
   z-index: 2;
 }
@@ -266,6 +278,14 @@ html {
   animation: shrink 1s;
 }
 
+@keyframes mergecolorshift {
+    0% {background-image: url("file:///home/adriana/Desktop/backgrounds/1.png");}
+    25% {background-image: url("file:///home/adriana/Desktop/backgrounds/2.png");}
+    50% {background-image: url("file:///home/adriana/Desktop/backgrounds/3.png");}
+    75% {background-image: url("file:///home/adriana/Desktop/backgrounds/4.png");}
+    100% {background-image: url("file:///home/adriana/Desktop/backgrounds/5.png");}
+  }
+
 @keyframes colorshift {
   0% {
     background: linear-gradient(#ffa07a, #1e90ff);
@@ -285,6 +305,27 @@ html {
 
   100% {
     background: linear-gradient(#2e8b57, #2f4f4f);
+  }
+}
+@-moz-keyframes colorshift {
+  0% {
+    background: -moz-linear-gradient(top, #ffa07a, #1e90ff);
+  }
+
+  25% {
+    background: -moz-linear-gradient(top, #ffdab9, #66cdea);
+  }
+
+  50% {
+    background: -moz-linear-gradient(top, #8fbc8f, #2e9fff);
+  }
+
+  75% {
+    background: -moz-linear-gradient(top, #3cb371, #3282b4);
+  }
+
+  100% {
+    background: -moz-linear-gradient(top, #2e8b57, #2f4f4f);
   }
 }
 
@@ -346,6 +387,13 @@ html {
   50% { transform: scale(.9);}
 }
 
+@-moz-keyframes pulse {
+0%, 100% { -moz-transform: scale(1);}
+20%, 80% { -moz-transform: scale(0.9)}
+40%, 60% { -moz-transform: scale(1); }
+50% { -moz-transform: scale(.9);}
+}
+
 @keyframes rise {
   from { bottom: 0; }
   to { bottom: 100%; }
@@ -355,11 +403,20 @@ html {
   from {transform: rotateY(0deg); }
   to { transform: rotateY(180deg);}
 }
+@-moz-keyframes roll {
+  from {-moz-transform: rotateY(0deg); }
+  to { -moz-transform: rotateY(180deg);}
+}
 
 @keyframes spin {
   0% {transform: rotateY(0deg) rotateZ(0deg);}
   50% {transform:  rotateY(180deg) rotateZ(180deg);}
   100% {transform:  rotateZ(360deg) rotateZ(360deg);}
+}
+@-moz-keyframes spin {
+  0% {-moz-transform: rotateY(0deg) rotateZ(0deg);}
+  50% {-moz-transform:  rotateY(180deg) rotateZ(180deg);}
+  100% {-moz-transform:  rotateZ(360deg) rotateZ(360deg);}
 }
 
 @keyframes squish {
@@ -383,7 +440,33 @@ html {
   }
 }
 
+@-moz-keyframes squish {
+  0% {
+    -moz-transform: scaleY(0.5) scaleX(1.5);
+  }
+  15% {
+    -moz-transform: scaleY(0.75) scaleX(1.25);
+  }
+
+  20% {
+    -moz-transform: scaleY(1.05) scaleX(0.95);
+  }
+
+  25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
+    -moz-transform: scale(.9);
+  }
+
+ 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+    -moz-transform: scale(1);
+  }
+}
+
 @keyframes shrink {
   from { transform: scale(1); }
   to { transform: scale(0); }
+}
+
+@-moz-keyframes shrink {
+  from { -moz-transform: scale(1); }
+  to { -moz-transform: scale(0); }
 }

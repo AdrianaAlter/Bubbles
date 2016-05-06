@@ -49,19 +49,15 @@ html {
   /*-moz-animation: colorshift 30s steps(100) infinite;*/
 }
 
-html, .bubbles {
+html {
   /*animation: colorshift 30s steps(100) infinite;*/
   animation: mergecolorshift 20s steps(100) infinite;
-
   animation-direction: alternate;
-  /*filter: blur(10px);*/
-
   height: 100%;
   margin: auto;
   opacity: 50%;
   outline: 0;
   position: relative;
-  /*transition: background 5s ease-in;*/
   width: 100%;
 }
 

@@ -16,6 +16,16 @@ Bubbles is a demonstration of CSS3 techniques.  It uses pseudo elements and radi
   }
 </code></pre>
 
-The spinning text at the top left and bottom right corners showcases CSS transforms on all three axes.  Mousing over any individual bubble will restart its animation cycle, essentially meaning that you can adjust the bubbles' distribution on your screen.  If you catch the bubbles at the top of the screen, you can even pop them!  To fill your own computer screen with bubbles, visit http://adrianaalter.github.io/Bubbles/.
+The spinning text at the top left and bottom right corners showcases CSS transforms on all three axes, as well as changing color and position:
+
+<pre><code>
+  @keyframes spin {
+    0% {transform: rotateY(0deg) rotateZ(0deg);}
+    50% {transform:  rotateY(180deg) rotateZ(180deg);}
+    100% {transform:  rotateZ(360deg) rotateZ(360deg);}
+  }
+</code></pre>
+
+Mousing over any individual bubble will restart its animation cycle, essentially meaning that you can adjust the bubbles' distribution on your screen.  If you catch the bubbles at the top of the screen, you can even pop them!  To fill your own computer screen with bubbles, visit http://adrianaalter.github.io/Bubbles/.
 
 <img src="./images/bubbles.png"></img>
